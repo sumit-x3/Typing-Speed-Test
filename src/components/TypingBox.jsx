@@ -86,9 +86,9 @@ function TypingBox() {
       ></textarea>
       {isDone ? (
         <div className="text-left space-y-2 mt-4">
-          <p>⏱ Time taken {(endTime - startTime) / 1000}s</p>
-          <p>⚡ WPM {calculateWPM()}</p>
-          <p>🎯 Accuracy {calculateAccuracy()}</p>
+          <p>⏱ Time taken { ((endTime - startTime) / 1000).toFixed(2) } seconds</p>
+          <p>⚡ Words per Minute (WPM): {calculateWPM()}</p>
+          <p>🎯 Accuracy {calculateAccuracy()}%</p>
           <button
             onClick={resetTest}
             className="mt-2 px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600"
